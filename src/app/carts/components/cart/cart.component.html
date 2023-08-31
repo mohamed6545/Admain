@@ -1,0 +1,89 @@
+  
+ <div class="cartBox">
+     
+ <!--     <form [ formGroup]=" form">
+        <div class="row">
+            <div class="col-md-3">
+                <label form="">Start Date</label>
+                <input type="date" formControlName="start"  class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label form="">End Date</label>
+                    <input type="data" formControlName="end" class="form-control">
+                    </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button class="btn btn-success" (click)="applyFilter()">Apply</button>
+                    </div>
+                    </div> 
+                     </form> --> 
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Date</th>
+                    <th  >Quantity</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of carts; let index = index">
+                        
+                        <td></td>
+                        <td>{{item. date | date:"shortDate"}}</td>
+                        <td>
+                          {{item.products.length}}
+                            </td>
+                            <td>
+                                <button class="btn btn-danger max-2" (click)="deleteCart(item.id)" >Delete</button>
+                                 <button class="btn btn-primary" data-toggle="modal" data-target="#viewCart"  (click)="view(index)">View</button>
+              </td>
+         </tr>
+    </tbody>
+  </table>
+</div>
+ 
+<!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+<div class="modal-dialog modal-dialog-centered" style="max-width:900px!important ">
+  <div class="modal-content">
+    <div class="modal-header">
+  <div class="modal-title" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="cartBox">
+                
+            </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>price</th>
+                    <th style="width: 25%;">Quantity</th>
+                    <th>Totle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of products;let i =index">
+                    <td><img src="{{item.item.image}}" alt=""></td>
+                    <td>{{item.item.title}}</td>
+                    <td>{{item.price}}</td>
+                    <td>
+                        {{item.quantity}}
+                    </td>
+                    <td>{{item.item.price * item.quantity}} L.E</td>
+                    </tr>
+                    </tbody>
+                        </table>
+                        </div>
+                        </div>
+                        </div>
+                        </div>   --> 
+                        
+         
+       
+ 
